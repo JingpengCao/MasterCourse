@@ -1,10 +1,5 @@
 rm(list=ls())
 
-#library(tidyverse)
-#library(MuMIn)
-#library(MASS)
-#library(RColorBrewer)
-
 #data organization
 
 data <- read.csv("Eulaema.csv")
