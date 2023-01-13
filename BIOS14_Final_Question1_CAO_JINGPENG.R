@@ -15,6 +15,10 @@ m <- lm(subd$ASD ~ subd$treat * subd$sp)
 anova(m)
 summary(m)
 
+#quick check the normal distribution for residual
+
+hist(residuals(m))
+
 #summary data for plotting
 
 subd$group <- paste(subd$treat, subd$sp, sep="_")
