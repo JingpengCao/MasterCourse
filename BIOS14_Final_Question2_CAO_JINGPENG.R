@@ -16,6 +16,10 @@ subd <- subd[subd$density == "low",]
 m <- lm(subd$hornR ~ subd$mass)
 summary(m)
 
+#quick check the normal distribution for residual
+
+hist(residuals(m))
+
 #predict data for plotting
 
 pred <- data.frame(pred_horn = predict(m, newdata = data.frame(subd$mass)), 
