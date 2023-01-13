@@ -1,5 +1,7 @@
 rm(list=ls())
 
+setwd("~/Study/LundUniversity/Processing_and_Analysis_of_Biological_Data/FinalExam")
+
 #read and clean data
 
 data <- read.csv("exam2022_part1.csv")
@@ -42,11 +44,11 @@ library(ggplot2)
 
 ggplot(data = sum,
        mapping = aes(x = treat, y = means, group = sp)) + 
-  geom_point(aes(shape = sp), size = 2) +
+  geom_point(aes(shape = sp, color = sp), size = 2.5) +
   scale_shape_manual(values = c(15,17)) +
   geom_errorbar(aes(ymin = means-se, ymax = means+se), width = 0.04) +
   geom_line(aes(group = sp)) +
-  labs(x = "Treatment", y = "Anther-stigma distance (mm)", shape = "species ID") +
+  labs(x = "Treatment", y = "Anther-stigma distance (mm)", shape = "species ID", color = "species ID") +
   theme_classic() +
   theme(text = element_text(size = 12, family = "serif"))
 
