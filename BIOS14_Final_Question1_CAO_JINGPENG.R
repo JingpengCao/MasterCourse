@@ -1,7 +1,5 @@
 rm(list=ls())
 
-setwd("~/Study/LundUniversity/Processing_and_Analysis_of_Biological_Data/FinalExam")
-
 #read and clean data
 
 data <- read.csv("exam2022_part1.csv")
